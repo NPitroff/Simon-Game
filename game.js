@@ -15,5 +15,5 @@ function nextSequence(){
   gamePattern.push(randomChosenColor);
   console.log("The Game Pattern Is "+gamePattern);
   // select the button with the same id as the random Color
-  $("#"+randomChosenColor).fadeOut(100);
+  $("#"+randomChosenColor).fadeOut(100).fadeIn(100);
 }
