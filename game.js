@@ -18,10 +18,11 @@ function nextSequence(){
   console.log("The Game Pattern Is "+gamePattern);
   // select the button with the same id as the random Color
   $("#"+randomChosenColor).fadeOut(100).fadeIn(100);
-  // var to hold the correct sound
-  var audio = new Audio("sounds/"+ randomChosenColor + ".mp3");
-  // play selected audio file
-  audio.play();
+  // // var to hold the correct sound
+  // var audio = new Audio("sounds/"+ randomChosenColor + ".mp3");
+  // // play selected audio file
+  // audio.play();
+  playSound(randomChosenColor);
 }
 // detect when a button is clicked
 $(".btn").click(function(e){
@@ -30,4 +31,13 @@ $(".btn").click(function(e){
   console.log("The userChosenColor is "+userChosenColor);
   userClickedPattern.push(userChosenColor);
   console.log(userClickedPattern);
+  playSound(userChosenColor);
 })
+
+// add sounds to button clicks and playbacks
+function playSound(name){
+  // var to hold the correct sound
+  var audio = new Audio("sounds/"+ name + ".mp3");
+  // play selected audio file
+  audio.play();
+}
