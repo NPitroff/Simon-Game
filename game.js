@@ -21,3 +21,7 @@ function nextSequence(){
   // play selected audio file
   audio.play();
 }
+// detect when a button is clicked
+$("div").click(function(e){
+  console.log(e);
+})
