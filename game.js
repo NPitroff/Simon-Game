@@ -24,4 +24,6 @@ function nextSequence(){
 // detect when a button is clicked
 $(".btn").click(function(e){
   console.log(e);
+  var userChosenColor = $(this).attr('id');
+  console.log("The userChosenColor is "+userChosenColor);
 })
