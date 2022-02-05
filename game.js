@@ -2,6 +2,8 @@
 var buttonColors = ["red", "blue", "green", "yellow"];
 // array to hold the game pattern
 var gamePattern = [];
+// array for the user pattern
+var userClickedPattern = [];
 
 function nextSequence(){
   // var to generate a random number
@@ -26,4 +28,6 @@ $(".btn").click(function(e){
   console.log(e);
   var userChosenColor = $(this).attr('id');
   console.log("The userChosenColor is "+userChosenColor);
+  userClickedPattern.push(userChosenColor);
+  console.log(userClickedPattern);
 })
