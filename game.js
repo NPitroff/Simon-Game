@@ -22,6 +22,6 @@ function nextSequence(){
   audio.play();
 }
 // detect when a button is clicked
-$("div").click(function(e){
+$(".btn").click(function(e){
   console.log(e);
 })
