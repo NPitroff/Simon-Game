@@ -12,16 +12,12 @@ function nextSequence(){
   // var to pick a random element from the array
   var randomChosenColor = buttonColors[randomNumber]
   console.log("Random Chosen Color is "+randomChosenColor);
-
   // var to push into the gamePattern array
   gamePattern.push(randomChosenColor);
   console.log("The Game Pattern Is "+gamePattern);
   // select the button with the same id as the random Color
   $("#"+randomChosenColor).fadeOut(100).fadeIn(100);
-  // // var to hold the correct sound
-  // var audio = new Audio("sounds/"+ randomChosenColor + ".mp3");
-  // // play selected audio file
-  // audio.play();
+    // call playSound for randomChosenColor
   playSound(randomChosenColor);
 }
 // detect when a button is clicked
@@ -31,6 +27,9 @@ $(".btn").click(function(e){
   console.log("The userChosenColor is "+userChosenColor);
   userClickedPattern.push(userChosenColor);
   console.log(userClickedPattern);
+  // show button click
+  $("#"+userChosenColor).fadeOut(100).fadeIn(100);
+  // call playSound() for the userChosenColor
   playSound(userChosenColor);
 })
 
