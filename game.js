@@ -27,8 +27,8 @@ $(".btn").click(function(e){
   console.log("The userChosenColor is "+userChosenColor);
   userClickedPattern.push(userChosenColor);
   console.log(userClickedPattern);
-  // show button click
-  $("#"+userChosenColor).fadeOut(100).fadeIn(100);
+  // // show button click
+  // $("#"+userChosenColor).fadeOut(100).fadeIn(100);
   // call playSound() for the userChosenColor
   playSound(userChosenColor);
 })
@@ -39,4 +39,12 @@ function playSound(name){
   var audio = new Audio("sounds/"+ name + ".mp3");
   // play selected audio file
   audio.play();
+}
+// function to show a button click
+function animatePress(currentColor){
+  $(".btn").addClass(".pressed");
+
+  setTimeout(function(){
+    $("btn").removeClass(".pressed");
+  }, 500);
 }
