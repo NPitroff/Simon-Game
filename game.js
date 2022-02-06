@@ -8,7 +8,8 @@ var userClickedPattern = [];
 function nextSequence(){
   // var to generate a random number
   var randomNumber = Math.floor(Math.random()*4);
-  console.log("The Random Number is "+randomNumber);
+  //console.log("The Random Number is "+randomNumber);
+
   // var to pick a random element from the array
   var randomChosenColor = buttonColors[randomNumber]
   console.log("Random Chosen Color is "+randomChosenColor);
@@ -16,7 +17,7 @@ function nextSequence(){
   gamePattern.push(randomChosenColor);
   console.log("The Game Pattern Is "+gamePattern);
   // select the button with the same id as the random Color
-  $("#"+randomChosenColor).fadeOut(100).fadeIn(100);
+  $("#"+randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
     // call playSound for randomChosenColor
   playSound(randomChosenColor);
 }
