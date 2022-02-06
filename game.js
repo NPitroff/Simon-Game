@@ -45,9 +45,9 @@ function playSound(name){
 // function to show a button click
 function animatePress(currentColor){
   $("."+currentColor).addClass("pressed");
-  
   console.log("Add pressed to "+currentColor);
-  // setTimeout(function(){
-  //   $("."+currentColor).removeClass(".pressed");
-  // }, 500);
+  // set timeout to remove class
+  setTimeout(function(){
+    $("."+currentColor).removeClass("pressed");
+  }, 100);
 }
