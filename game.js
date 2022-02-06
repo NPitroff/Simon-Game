@@ -31,6 +31,8 @@ $(".btn").click(function(e){
   // $("#"+userChosenColor).fadeOut(100).fadeIn(100);
   // call playSound() for the userChosenColor
   playSound(userChosenColor);
+  // call function to animate press
+  animatePress(userChosenColor);
 })
 
 // add sounds to button clicks and playbacks
@@ -42,9 +44,10 @@ function playSound(name){
 }
 // function to show a button click
 function animatePress(currentColor){
-  $(".btn").addClass(".pressed");
-
-  setTimeout(function(){
-    $("btn").removeClass(".pressed");
-  }, 500);
+  $("."+currentColor).addClass("pressed");
+  
+  console.log("Add pressed to "+currentColor);
+  // setTimeout(function(){
+  //   $("."+currentColor).removeClass(".pressed");
+  // }, 500);
 }
