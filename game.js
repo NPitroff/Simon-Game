@@ -5,7 +5,9 @@ var gamePattern = [];
 // array for the user pattern
 var userClickedPattern = [];
 // variable to store the level
-var level = 0;
+var level = 1;
+// var to detect if the keypress has already been hit
+var started = false;
 
 function nextSequence(){
   // var to generate a random number
@@ -23,7 +25,7 @@ function nextSequence(){
     // call playSound for randomChosenColor
   playSound(randomChosenColor);
   // increase the count of level for every nextSequence()
-  level++;
+  level++
 }
 // detect when a button is clicked
 $(".btn").click(function(e){
@@ -58,9 +60,12 @@ function animatePress(currentColor){
 }
 // detect when a key has been pressed
 $(document).keypress(function(){
+  // if statement to detect start of game
+  if (!started) {
+    started = true;
   // change the h1 to show the level
   $("h1").html("Level "+level);
   // call nextSequence() to start the game
   nextSequence();
-
+  }
 })
