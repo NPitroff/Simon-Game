@@ -4,6 +4,8 @@ var buttonColors = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 // array for the user pattern
 var userClickedPattern = [];
+// variable to store the level
+var level = 0;
 
 function nextSequence(){
   // var to generate a random number
@@ -54,6 +56,9 @@ function animatePress(currentColor){
 }
 // detect when a key has been pressed
 $(document).keypress(function(){
+  // change the h1 to show the level
+  $("h1").html("Level "+level);
   // call nextSequence() to start the game
   nextSequence();
+
 })
