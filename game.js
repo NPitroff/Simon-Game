@@ -52,3 +52,8 @@ function animatePress(currentColor){
     $("."+currentColor).removeClass("pressed");
   }, 100);
 }
+// detect when a key has been pressed
+$(document).keypress(function(){
+  // call nextSequence() to start the game
+  nextSequence();
+})
