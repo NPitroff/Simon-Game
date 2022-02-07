@@ -22,6 +22,8 @@ function nextSequence(){
   $("#"+randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
     // call playSound for randomChosenColor
   playSound(randomChosenColor);
+  // increase the count of level for every nextSequence()
+  level++;
 }
 // detect when a button is clicked
 $(".btn").click(function(e){
