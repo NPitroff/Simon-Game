@@ -61,6 +61,8 @@ function checkAnswer(currentLevel){
   },200)
   // Change h1 to say game over
   $("#level-title").html("Game Over, Press Any Key to Restart")
+  // Restart the game
+  startOver();
   }
 }
 
@@ -105,4 +107,14 @@ function animatePress(currentColor){
   setTimeout(function(){
     $("."+currentColor).removeClass("pressed");
   }, 100);
+}
+
+// function to restart after game over
+function startOver(){
+  // reset level
+  level = 0;
+  // clear gamePattern[]
+  gamePattern = [];
+  // reset started
+  started = false;
 }
