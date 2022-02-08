@@ -39,9 +39,19 @@ $(".btn").click(function(e){
 // function to check the user answer
 function checkAnswer(currentLevel){
   //check if user array matches against game array
-  if(gamePattern[currentLevel] === userClickedPattern[currentLevel])
+  if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
   console.log("success");
-  
+  // statement to add to the sequence
+  if(userClickedPattern.length === gamePattern.length){
+    // call next color after delay
+    setTimeout(function(){
+      nextSequence();
+    }, 1000)
+  }
+  // else statement for wrong answer
+} else {
+  console.log("wrong");
+  }
 }
 
 // add to the sequence
