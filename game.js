@@ -53,6 +53,12 @@ function checkAnswer(currentLevel){
   console.log("wrong");
   // call play sound for wrong answer
   playSound("wrong");
+  // add class of "game-over" to the body
+  $("body").addClass("game-over");
+  // setTimeout to make the screen flash red
+  setTimeout(function(){
+    $("body").removeClass("game-over");
+  },200)
   }
 }
 
