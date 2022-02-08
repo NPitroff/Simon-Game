@@ -51,13 +51,15 @@ function checkAnswer(currentLevel){
   // else statement for wrong answer
 } else {
   console.log("wrong");
+  // call play sound for wrong answer
+  playSound("wrong");
   }
 }
 
 // add to the sequence
 function nextSequence(){
   // reset the userPattern[] for next level
-  userClickedPattern = []
+  userClickedPattern = [];
   // increase the count of level for every nextSequence()
   level++
   // level of the game
