@@ -40,8 +40,6 @@ $(".btn").click(function(e){
   playSound(userChosenColor);
   // call function to animate press
   animatePress(userChosenColor);
-  // pass the indexOf the userClickedPattern
-  checkAnswer(userClickedPattern.length-1)
 })
 
 // add sounds to button clicks and playbacks
@@ -76,5 +74,16 @@ $(document).keypress(function(){
 
 // function to check the user answer
 function checkAnswer(currentLevel){
-  console.log("The index of the value is "+currentLevel);
+  // pass the indexOf the userClickedPattern
+  if(userClickedPattern[currentLevel] == gamePattern[currentLevel]){
+    // count how many colors the user got correct
+    var correct = 0;
+    // loop through arrays to compare the same values
+    for (var=i; i < gamePattern.length; i++){
+      if(gamePattern[i] === userClickedPattern[i]){
+        correct++;
+      }
+    }
+  }
+
 }
