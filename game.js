@@ -56,8 +56,12 @@ function checkAnswer(currentLevel){
 
 // add to the sequence
 function nextSequence(){
+  // reset the userPattern[] for next level
+  userClickedPattern = []
   // increase the count of level for every nextSequence()
   level++
+  // level of the game
+  $("#level-title").html("Level "+level);
   // var to generate a random number
   var randomNumber = Math.floor(Math.random()*4);
   //console.log("The Random Number is "+randomNumber);
